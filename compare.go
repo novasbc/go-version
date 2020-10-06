@@ -87,14 +87,14 @@ func CompareNormalized(version1, version2, operator string) bool {
 // CompareSimple compares two normalizated version number strings
 //
 // Just the same of CompareVersion but return a int result, 0 if both version
-// are equal, 1 if the right side is bigger and -1 if the right side is lower
+// are equal, -1 if the right side is bigger and 1 if the right side is lower
 //
 // Usage
 //     version.CompareSimple("1.2", "1.0.1")
-//     Returns: 1
+//     Returns: -1
 //
 //     version.CompareSimple("1.0rc1", "1.0")
-//     Returns: -1
+//     Returns: 1
 func CompareSimple(version1, version2 string) int {
 	var x, r, l int = 0, 0, 0
 
